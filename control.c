@@ -18,7 +18,7 @@ int main(int argc, char **argv){
     else{
       int val;
       sscanf(argv[2], "%d" , &val);
-      semctl(sd, 0 , SETVAL, val);
+      semctl(semid, 0 , SETVAL, val);
       printf("Semaphore created: %d\n", KEY);
       printf("Value : %d\n", val);
     }
