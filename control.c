@@ -29,7 +29,7 @@ int main(int argc, char **argv){
   }
   else if(!strcmp(argv[1], "-r")){
     int semid = semget(KEY,0,0);
-    printf("Semaphore removed : %d\n" , semctl(semid, 0 , PIC_RMID));
+    printf("Semaphore removed : %d\n" , semctl(semid, 0 , IPC_RMID));
 
   }
   return 0;
